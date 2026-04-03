@@ -1501,6 +1501,15 @@ ul {
     height: auto;
 }
 
+
+.footer {
+    border-top: 1px solid rgba(217, 217, 217, 1);
+}
+
+.main .footer {
+    border-top: none;
+}
+
 .footer-logo {
     margin-bottom: 40px;
     display: flex;
@@ -2078,6 +2087,8 @@ ul {
 .services-link:hover {
     opacity: 0.8;
 }
+
+
 
 @media screen and (max-width: 1400px) {
     .header-nav {
