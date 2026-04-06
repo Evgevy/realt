@@ -558,6 +558,7 @@ ul {
     border-radius: 4px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 15px;
     font-family: Manrope;
     font-weight: 500;
@@ -844,6 +845,8 @@ ul {
     letter-spacing: -2%;
     color: rgba(54, 54, 54, 0.4);
 }
+
+.budget--white .budget-btn 
 
 
 .why {
@@ -2864,6 +2867,10 @@ ul {
     .budget--about::before {
         width: 450px;
         height: 250px;
+    }
+
+    .budget-btn {
+        font-size: 15px;
     }
 
     .deal-item h3 {
