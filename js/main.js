@@ -58,31 +58,65 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const hero = document.getElementById('heroBottom');
 
-    function initTicker() {
-        if (window.innerWidth <= 991 && !hero.classList.contains('cloned')) {
+    if (hero) {
+      function initTicker() {
+          if (window.innerWidth <= 991 && !hero.classList.contains('cloned')) {
 
-            const items = hero.innerHTML;
-            hero.innerHTML += items; // дублируем
+              const items = hero.innerHTML;
+              hero.innerHTML += items; 
 
-            hero.classList.add('cloned');
-        }
+              hero.classList.add('cloned');
+          }
+      }
+
+      initTicker();
+
+      window.addEventListener('resize', () => {
+          if (window.innerWidth > 991) {
+              hero.innerHTML = `
+                  <div class="col-3 hero-item"><p>Бесплатно <br>сопроводим при покупке <br>в новостройке</p></div>
+                  <div class="col-3 hero-item"><p>Проверим объект за <br>свой счет, гарантируем 100% <br>юридическую чистоту</p></div>
+                  <div class="col-3 hero-item"><p>Снизим комиссию <br>вдвое, если сделка <br>затянется</p></div>
+                  <div class="col-3 hero-item"><p>Найдем решение, <br>а не просто отправим <br>готовую подборку</p></div>
+              `;
+              hero.classList.remove('cloned');
+          } else {
+              initTicker();
+          }
+      });
     }
 
-    initTicker();
-
-    window.addEventListener('resize', () => {
-        if (window.innerWidth > 991) {
-            hero.innerHTML = `
-                <div class="col-3 hero-item"><p>Бесплатно <br>сопроводим при покупке <br>в новостройке</p></div>
-                <div class="col-3 hero-item"><p>Проверим объект за <br>свой счет, гарантируем 100% <br>юридическую чистоту</p></div>
-                <div class="col-3 hero-item"><p>Снизим комиссию <br>вдвое, если сделка <br>затянется</p></div>
-                <div class="col-3 hero-item"><p>Найдем решение, <br>а не просто отправим <br>готовую подборку</p></div>
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', function () {
+        const parent = this.closest('.filter-item');
+        parent.classList.toggle('active'); 
+    
+        
+        const icon = this.querySelector('.filter-icon');
+    
+        if (icon) {
+          if (parent.classList.contains('active')) {
+            
+            icon.outerHTML = `
+              <svg class="filter-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="10" cy="10" r="10" fill="white"/>
+                <path d="M14.0902 9.31818C14.271 9.31818 14.4445 9.39001 14.5723 9.51788C14.7002 9.64574 14.772 9.81917 14.772 9.99999C14.772 10.1808 14.7002 10.3542 14.5723 10.4821C14.4445 10.61 14.271 10.6818 14.0902 10.6818H10.6811H5.90838C5.72755 10.6818 5.55413 10.61 5.42626 10.4821C5.2984 10.3542 5.22656 10.1808 5.22656 9.99999C5.22656 9.81917 5.2984 9.64574 5.42626 9.51788C5.55413 9.39001 5.72755 9.31818 5.90838 9.31818H9.31747H10.6811H14.0902Z" fill="#D3A77D"/>
+              </svg>
             `;
-            hero.classList.remove('cloned');
-        } else {
-            initTicker();
+          } else {
+          
+            icon.outerHTML = `
+              <svg class="filter-icon" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.18093 3.40912C8.36176 3.40912 8.53518 3.48095 8.66305 3.60882C8.79091 3.73668 8.86275 3.91011 8.86275 4.09094V7.50003H12.2718C12.4527 7.50003 12.6261 7.57186 12.754 7.69973C12.8818 7.82759 12.9537 8.00102 12.9537 8.18185C12.9537 8.36268 12.8818 8.5361 12.754 8.66396C12.6261 8.79183 12.4527 8.86366 12.2718 8.86366H8.86275V12.2728C8.86275 12.4536 8.79091 12.627 8.66305 12.7549C8.53518 12.8827 8.36176 12.9546 8.18093 12.9546C8.0001 12.9546 7.82668 12.8827 7.69881 12.7549C7.57095 12.627 7.49911 12.4536 7.49911 12.2728V8.86366H4.09002C3.90919 8.86366 3.73577 8.79183 3.6079 8.66396C3.48004 8.5361 3.4082 8.36268 3.4082 8.18185C3.4082 8.00102 3.48004 7.82759 3.6079 7.69973C3.73577 7.57186 3.90919 7.50003 4.09002 7.50003H7.49911V4.09094C7.49911 3.91011 7.57095 3.73668 7.69881 3.60882C7.82668 3.48095 8.0001 3.40912 8.18093 3.40912Z" fill="#D3A77D"/>
+              </svg>
+            `;
+          }
         }
+      });
     });
-
-  
+    document.querySelectorAll('.filter-inputs input').forEach(input => {
+      input.addEventListener('input', () => {
+        input.value = input.value.replace(/\D/g, ''); 
+      });
+    });
 });

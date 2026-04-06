@@ -13,10 +13,10 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="service">
-
+<body class="catalog">
     <div class="wrapper">
-        <div class="header-wrapper header-wrapper--services">
+        <div class="header-wrapper">
+
             <header class="header">
                 <div class="header-main">
                     <div class="container">
@@ -137,237 +137,377 @@
                     </nav>
                 </div>
             </header>
-            <section class="hero d-block">
+            <section class="hero">
                 <div class="container">
                     <div class="hero-wrapper">
-                        <div class="row g-0 justify-content-between align-items-end hero-top">
+                        <div class="row justify-content-between align-items-end hero-top">
                             <div class="col-auto">
-                                <h1 class="hero-title title">Время для риэлтора</h1>
-                                <p class="hero-text">Услуги агентства недвижимости в Санкт-Петербурге и Ленобласти</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="hero-bottom">
-                    <div class="container">
-                        <div
-                            class="row g-0 flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3">
-
-                            <p class="col-auto hero-bottom-text">
-                                «Понимаем, что за каждой покупкой или продажей стоит большая цель»
-                            </p>
-
-                            <div class="col-auto d-flex align-items-center gap-3">
-
-                                <div>
-                                    <p class="hero-name">Антипов Игорь Владимирович</p>
-                                    <p class="hero-work">Руководитель компании</p>
-                                </div>
-
-                                <img src="img/dir.png" alt="Директор" class="hero-img">
-
+                                <h1 class="hero-title title">Каталог объектов <br>Время для риэлтора</h1>
                             </div>
 
                         </div>
+
                     </div>
+
                 </div>
             </section>
         </div>
         <main class="main">
-            <section class="services">
-                <div class="container">
-                    <h2 class="services-title title">Наши услуги</h2>
-                    <p class="services-text">Обеспечим финансовую выгоду и юридическую <br>чистоту на каждом этапе
-                        сделки</p>
+            <section class="catalog-main">
+                <div class="catalog-filtr mb-5">
+                    <div class="container">
+                        <div class="row g-0">
 
-                    <div class="row services-list">
-                        <!-- Карточка 1 -->
-                        <div class="col-12 col-sm-6 col-lg-4 mb-5">
-
-                            <div class="services-item h-100">
-                                <h3 class="services-name">Подбор и покупка новостроек</h3>
-                                <div class="services-desc">
-                                    <p>Индивидуально подберем ЖК под ваш <br>запрос и бюджет</p>
-                                    <p>Проведем честный аудит плюсов и минусов <br>застройщиков (шумоизоляция, сроки,
-                                        отделка)</p>
-                                    <p>Организуем выезды <br>на строительные площадки</p>
-                                    <p>Поможем с одобрением ипотеки и подбором <br>субсидированных ставок/рассрочек</p>
-                                    <p>Полностью сопроводим сделку (включая <br>дистанционные сделки для регионов)</p>
-                                    <p>Предоставим постпродажный сервис: помощь <br>в приемке и оформлении собственности
-                                    </p>
-                                </div>
-                                <div class="services-bottom">
-                                    <p class="services-price">Стоимость: 0₽ (услуги <br>оплачивает застройщик)</p>
-                                    <a href="#!" class="services-link d-flex align-items-center gap-5">ПОЛУЧИТЬ
-                                        КОНСУЛЬТАЦИЮ
-                                        <svg width="25" height="6" viewBox="0 0 25 6" fill="none"
+                            <!-- Тип сделки -->
+                            <div class="col-lg-3 col-md-6 col-12 g-0">
+                                <div class="filter-item">
+                                    <button class="filter-btn w-100">
+                                        Тип сделки
+                                        <svg class="filter-icon" width="17" height="17" viewBox="0 0 17 17" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0.5 3.22727H23.5M23.5 3.22727L20.05 0.5M23.5 3.22727L20.05 5.5"
-                                                stroke="#D3A77D" stroke-linecap="round"></path>
+                                            <path
+                                                d="M8.18093 3.40912C8.36176 3.40912 8.53518 3.48095 8.66305 3.60882C8.79091 3.73668 8.86275 3.91011 8.86275 4.09094V7.50003H12.2718C12.4527 7.50003 12.6261 7.57186 12.754 7.69973C12.8818 7.82759 12.9537 8.00102 12.9537 8.18185C12.9537 8.36268 12.8818 8.5361 12.754 8.66396C12.6261 8.79183 12.4527 8.86366 12.2718 8.86366H8.86275V12.2728C8.86275 12.4536 8.79091 12.627 8.66305 12.7549C8.53518 12.8827 8.36176 12.9546 8.18093 12.9546C8.0001 12.9546 7.82668 12.8827 7.69881 12.7549C7.57095 12.627 7.49911 12.4536 7.49911 12.2728V8.86366H4.09002C3.90919 8.86366 3.73577 8.79183 3.6079 8.66396C3.48004 8.5361 3.4082 8.36268 3.4082 8.18185C3.4082 8.00102 3.48004 7.82759 3.6079 7.69973C3.73577 7.57186 3.90919 7.50003 4.09002 7.50003H7.49911V4.09094C7.49911 3.91011 7.57095 3.73668 7.69881 3.60882C7.82668 3.48095 8.0001 3.40912 8.18093 3.40912Z"
+                                                fill="#D3A77D" />
                                         </svg>
-                                    </a>
+                                    </button>
+                                    <div class="filter-dropdown">
+                                        <label class="custom-radio">
+                                            <input type="radio" name="deal">
+                                            <span class="radio-box"></span>
+                                            Купить
+                                        </label>
+                                        <label class="custom-radio">
+                                            <input type="radio" name="deal">
+                                            <span class="radio-box"></span>
+                                            Продать
+                                        </label>
+                                        <label class="custom-radio">
+                                            <input type="radio" name="deal">
+                                            <span class="radio-box"></span>
+                                            Снять
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Тип недвижимости -->
+                            <div class="col-lg-3 col-md-6 col-12 g-0">
+                                <div class="filter-item">
+                                    <button class="filter-btn w-100">
+                                        Тип недвижимости
+                                        <svg class="filter-icon" width="17" height="17" viewBox="0 0 17 17" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M8.18093 3.40912C8.36176 3.40912 8.53518 3.48095 8.66305 3.60882C8.79091 3.73668 8.86275 3.91011 8.86275 4.09094V7.50003H12.2718C12.4527 7.50003 12.6261 7.57186 12.754 7.69973C12.8818 7.82759 12.9537 8.00102 12.9537 8.18185C12.9537 8.36268 12.8818 8.5361 12.754 8.66396C12.6261 8.79183 12.4527 8.86366 12.2718 8.86366H8.86275V12.2728C8.86275 12.4536 8.79091 12.627 8.66305 12.7549C8.53518 12.8827 8.36176 12.9546 8.18093 12.9546C8.0001 12.9546 7.82668 12.8827 7.69881 12.7549C7.57095 12.627 7.49911 12.4536 7.49911 12.2728V8.86366H4.09002C3.90919 8.86366 3.73577 8.79183 3.6079 8.66396C3.48004 8.5361 3.4082 8.36268 3.4082 8.18185C3.4082 8.00102 3.48004 7.82759 3.6079 7.69973C3.73577 7.57186 3.90919 7.50003 4.09002 7.50003H7.49911V4.09094C7.49911 3.91011 7.57095 3.73668 7.69881 3.60882C7.82668 3.48095 8.0001 3.40912 8.18093 3.40912Z"
+                                                fill="#D3A77D" />
+                                        </svg>
+                                    </button>
+                                    <div class="filter-dropdown">
+                                        <label class="custom-radio">
+                                            <input type="radio" name="type">
+                                            <span class="radio-box"></span>
+                                            Квартира
+                                        </label>
+                                        <label class="custom-radio">
+                                            <input type="radio" name="type">
+                                            <span class="radio-box"></span>
+                                            Дом
+                                        </label>
+                                        <label class="custom-radio">
+                                            <input type="radio" name="type">
+                                            <span class="radio-box"></span>
+                                            Коммерция
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Комнаты -->
+                            <div class="col-lg-3 col-md-6 col-12 g-0">
+                                <div class="filter-item">
+                                    <button class="filter-btn w-100">
+                                        Комнаты
+                                        <svg class="filter-icon" width="17" height="17" viewBox="0 0 17 17" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M8.18093 3.40912C8.36176 3.40912 8.53518 3.48095 8.66305 3.60882C8.79091 3.73668 8.86275 3.91011 8.86275 4.09094V7.50003H12.2718C12.4527 7.50003 12.6261 7.57186 12.754 7.69973C12.8818 7.82759 12.9537 8.00102 12.9537 8.18185C12.9537 8.36268 12.8818 8.5361 12.754 8.66396C12.6261 8.79183 12.4527 8.86366 12.2718 8.86366H8.86275V12.2728C8.86275 12.4536 8.79091 12.627 8.66305 12.7549C8.53518 12.8827 8.36176 12.9546 8.18093 12.9546C8.0001 12.9546 7.82668 12.8827 7.69881 12.7549C7.57095 12.627 7.49911 12.4536 7.49911 12.2728V8.86366H4.09002C3.90919 8.86366 3.73577 8.79183 3.6079 8.66396C3.48004 8.5361 3.4082 8.36268 3.4082 8.18185C3.4082 8.00102 3.48004 7.82759 3.6079 7.69973C3.73577 7.57186 3.90919 7.50003 4.09002 7.50003H7.49911V4.09094C7.49911 3.91011 7.57095 3.73668 7.69881 3.60882C7.82668 3.48095 8.0001 3.40912 8.18093 3.40912Z"
+                                                fill="#D3A77D" />
+                                        </svg>
+                                    </button>
+                                    <div class="filter-dropdown">
+                                        <label class="custom-radio">
+                                            <input type="radio" name="rooms">
+                                            <span class="radio-box"></span>
+                                            Студия
+                                        </label>
+                                        <label class="custom-radio">
+                                            <input type="radio" name="rooms">
+                                            <span class="radio-box"></span>
+                                            1
+                                        </label>
+                                        <label class="custom-radio">
+                                            <input type="radio" name="rooms">
+                                            <span class="radio-box"></span>
+                                            2
+                                        </label>
+                                        <label class="custom-radio">
+                                            <input type="radio" name="rooms">
+                                            <span class="radio-box"></span>
+                                            3+
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Цена -->
+                            <div class="col-lg-3 col-md-6 col-12 g-0">
+                                <div class="filter-item">
+                                    <button class="filter-btn w-100">
+                                        Цена
+                                        <svg class="filter-icon" width="17" height="17" viewBox="0 0 17 17" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M8.18093 3.40912C8.36176 3.40912 8.53518 3.48095 8.66305 3.60882C8.79091 3.73668 8.86275 3.91011 8.86275 4.09094V7.50003H12.2718C12.4527 7.50003 12.6261 7.57186 12.754 7.69973C12.8818 7.82759 12.9537 8.00102 12.9537 8.18185C12.9537 8.36268 12.8818 8.5361 12.754 8.66396C12.6261 8.79183 12.4527 8.86366 12.2718 8.86366H8.86275V12.2728C8.86275 12.4536 8.79091 12.627 8.66305 12.7549C8.53518 12.8827 8.36176 12.9546 8.18093 12.9546C8.0001 12.9546 7.82668 12.8827 7.69881 12.7549C7.57095 12.627 7.49911 12.4536 7.49911 12.2728V8.86366H4.09002C3.90919 8.86366 3.73577 8.79183 3.6079 8.66396C3.48004 8.5361 3.4082 8.36268 3.4082 8.18185C3.4082 8.00102 3.48004 7.82759 3.6079 7.69973C3.73577 7.57186 3.90919 7.50003 4.09002 7.50003H7.49911V4.09094C7.49911 3.91011 7.57095 3.73668 7.69881 3.60882C7.82668 3.48095 8.0001 3.40912 8.18093 3.40912Z"
+                                                fill="#D3A77D" />
+                                        </svg>
+                                    </button>
+                                    <div class="filter-dropdown">
+                                        <div class="filter-inputs">
+                                            <input type="text" class="form-control mb-2" placeholder="От">
+                                            <input type="text" class="form-control" placeholder="До">
+                                        </div>
+
+                                    </div>
                                 </div>
                             </div>
 
                         </div>
-
-                        <!-- Карточка 2 -->
-                        <div class="col-12 col-sm-6 col-lg-4 mb-5">
-
-                            <div class="services-item h-100">
-                                <h3 class="services-name">Покупка вторичной недвижимости</h3>
-                                <div class="services-desc">
-                                    <p>Составим ТЗ и проведем глубокую <br>аналитику рынка под запрос</p>
-                                    <p>Организуем просмотры <br>и профессиональные переговоры по торгу</p>
-                                    <p>Проконтролируем внесение аванса <br>и подписание предварительного соглашения</p>
-                                    <p>Проведем многоступенчатую юридическую проверку объекта и собственников</p>
-                                    <p>Согласуем сделки с банками <br>и госорганами (опека, субсидии)</p>
-                                    <p>Примем объект по акту и проконсультируем <br>по налоговому вычету</p>
-                                </div>
-                                <div class="services-bottom">
-                                    <p class="services-price">Стоимость: 3% от суммы <br>сделки (минимум 120 000 ₽)</p>
-                                    <a href="#!" class="services-link d-flex align-items-center gap-5">ПОЛУЧИТЬ
-                                        КОНСУЛЬТАЦИЮ
-                                        <svg width="25" height="6" viewBox="0 0 25 6" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0.5 3.22727H23.5M23.5 3.22727L20.05 0.5M23.5 3.22727L20.05 5.5"
-                                                stroke="#D3A77D" stroke-linecap="round"></path>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!-- Карточка 3 -->
-                        <div class="col-12 col-sm-6 col-lg-4 mb-5">
-
-                            <div class="services-item h-100">
-                                <h3 class="services-name">Продажа недвижимости</h3>
-                                <div class="services-desc">
-                                    <p>Проведем профессиональную оценку <br>и предпродажную подготовку (хоумстейджинг)
-                                    </p>
-                                    <p>Организуем качественную фотосессию <br>и создадим продающее объявления</p>
-                                    <p>Запустим рекламную кампанию <br>на всех ведущих площадках</p>
-                                    <p>Возьмем на себя прием звонков, фильтрацию <br>покупателей и проведение показов
-                                    </p>
-                                    <p>Соберем пакеты документов и организуем <br>безопасные расчеты</p>
-                                    <p>Сопроводим передачу объекта <br>и получение денег</p>
-                                    <p>Окажем налоговый консалтинг: <br>оптимизацию выплат при продаже</p>
-                                </div>
-                                <div class="services-bottom">
-                                    <p class="services-price">Стоимость: 3% от суммы <br>сделки (минимум 120 000 ₽)</p>
-                                    <a href="#!" class="services-link d-flex align-items-center gap-5">ПОЛУЧИТЬ
-                                        КОНСУЛЬТАЦИЮ
-                                        <svg width="25" height="6" viewBox="0 0 25 6" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0.5 3.22727H23.5M23.5 3.22727L20.05 0.5M23.5 3.22727L20.05 5.5"
-                                                stroke="#D3A77D" stroke-linecap="round"></path>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!-- Карточка 4 -->
-                        <div class="col-12 col-sm-6 col-lg-4 mb-5">
-
-                            <div class="services-item h-100">
-                                <h3 class="services-name">Юридическое <br>сопровождение сделки</h3>
-                                <div class="services-desc">
-                                    <p>Проведем полную юридическую проверку <br>квартиры и истории продавца</p>
-                                    <p>Обеспечим грамотное внесение/прием аванса <br>или задатка</p>
-                                    <p>Поможем с одобрением ипотеки и согласованием <br>объекта с банком (при
-                                        необходимости)</p>
-                                    <p>Подготовим договор купли-продажи <br>(ДКП) любой сложности</p>
-                                    <p>Организуем безопасные <br>взаиморасчеты (аккредитив, ячейка)</p>
-                                    <p>Подадим документы на регистрацию <br>и контроль перехода права собственности</p>
-                                    <p>Обеспечим прием/передачу <br>объекта по акту приема-передачи</p>
-                                </div>
-                                <div class="services-bottom">
-                                    <p class="services-price">Стоимость: от 100 000 ₽</p>
-                                    <a href="#!" class="services-link d-flex align-items-center gap-5">ПОЛУЧИТЬ
-                                        КОНСУЛЬТАЦИЮ
-                                        <svg width="25" height="6" viewBox="0 0 25 6" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0.5 3.22727H23.5M23.5 3.22727L20.05 0.5M23.5 3.22727L20.05 5.5"
-                                                stroke="#D3A77D" stroke-linecap="round"></path>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="col-12 col-sm-6 col-lg-4 mb-5">
-
-                            <div class="services-item h-100">
-                                <h3 class="services-name">Загородная и коммерческая <br>недвижимость</h3>
-                                <div class="services-desc">
-                                    <p>Организуем проверку земельных участков, <br>техусловий и выделенных мощностей</p>
-                                    <p>Проанализируем ликвидности локации <br>и потенциала роста цены</p>
-                                    <p>Проверим юридическую чистоту сложных <br>объектов (назначение земель, ВРИ)</p>
-                                    <p>Оценим коммерческий потенциал <br>(трафик, окупаемость)</p>
-                                    <p>Организуем полный цикл <br>оформления сделки «под ключ»</p>
-                                </div>
-                                <div class="services-bottom">
-                                    <p class="services-price">Стоимость: рассчитывается индивидуально (в зависимости
-                                        <br>от сложности)
-                                    </p>
-                                    <a href="#!" class="services-link d-flex align-items-center gap-5">ПОЛУЧИТЬ
-                                        КОНСУЛЬТАЦИЮ
-                                        <svg width="25" height="6" viewBox="0 0 25 6" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0.5 3.22727H23.5M23.5 3.22727L20.05 0.5M23.5 3.22727L20.05 5.5"
-                                                stroke="#D3A77D" stroke-linecap="round"></path>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="col-12 col-sm-6 col-lg-4 mb-5">
-
-                            <div class="services-item h-100">
-                                <h3 class="services-name">Страхование недвижимости</h3>
-                                <div class="services-desc">
-                                    <p>Защита имущества: покрытие ущерба от пожара, <br>затопления, залива соседями и
-                                        т.д</p>
-                                    <p>Безопасность при эксплуатации: защита от <br>повреждений при ремонте или
-                                        противоправных <br>действий третьих лиц (кражи, вандализм)</p>
-                                    <p>Гражданская ответственность: страхование <br>вашей ответственности перед соседями
-                                    </p>
-                                    <p>Ипотечное страхование: подбор самых выгодных <br>тарифов для банков (жизнь,
-                                        титул, конструктив)</p>
-                                    <p>Помощь в быстром оформлении <br>полиса и экспертное содействие <br>при
-                                        урегулировании убытков</p>
-                                    <p>Сопроводим передачу объекта <br>и получение денег</p>
-                                    <p>Окажем налоговый консалтинг: <br>оптимизацию выплат при продаже</p>
-                                </div>
-                                <div class="services-bottom">
-                                    <p class="services-price">Стоимость: от ХХХХ ₽ / год <br>(зависит от суммы покрытия
-                                        <br>и параметров объекта)
-                                    </p>
-                                    <a href="#!" class="services-link d-flex align-items-center gap-5">ПОЛУЧИТЬ
-                                        КОНСУЛЬТАЦИЮ
-                                        <svg width="25" height="6" viewBox="0 0 25 6" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0.5 3.22727H23.5M23.5 3.22727L20.05 0.5M23.5 3.22727L20.05 5.5"
-                                                stroke="#D3A77D" stroke-linecap="round"></path>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-
-                        </div>
-
                     </div>
+                </div>
+                <div class="container">
 
+                    <div class="row g-3">
+
+                        <div class="col-lg-4 col-md-6 mb-5">
+                            <div class="property-card">
+                                <img src="img/studio.png" class="img-fluid mb-3" alt="Фото недвижимости">
+                                <h3 class="property-name mb-3">2-к. квартира, 62 м², 4/12 эт</h3>
+                                <p class="property-price">18 500 000 ₽ (298 000 ₽/м²)</p>
+                                <img src="img/path.png" class="path" alt="Маршрут">
+                                <ul class="property-features mb-3">
+                                    <li>
+                                        <span>Площадь</span>
+                                        <span><strong>25.6 м²</strong></span>
+                                    </li>
+                                    <li>
+                                        <span>Этаж</span>
+                                        <span><strong>5 из 19</strong></span>
+                                    </li>
+                                    <li>
+                                        <span>Ремонт</span>
+                                        <span><strong>Евро</strong></span>
+                                    </li>
+                                </ul>
+                                <a href="#" class="property-btn">Заглянуть внутрь</a>
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-4 col-md-6 mb-5">
+                            <div class="property-card">
+                                <img src="img/studio.png" class="img-fluid mb-3" alt="Фото недвижимости">
+                                <h3 class="property-name mb-3">2-к. квартира, 62 м², 4/12 эт</h3>
+                                <p class="property-price">18 500 000 ₽ (298 000 ₽/м²)</p>
+                                <img src="img/path.png" class="path" alt="Маршрут">
+                                <ul class="property-features mb-3">
+                                    <li>
+                                        <span>Площадь</span>
+                                        <span><strong>25.6 м²</strong></span>
+                                    </li>
+                                    <li>
+                                        <span>Этаж</span>
+                                        <span><strong>5 из 19</strong></span>
+                                    </li>
+                                    <li>
+                                        <span>Ремонт</span>
+                                        <span><strong>Евро</strong></span>
+                                    </li>
+                                </ul>
+                                <a href="#" class="property-btn">Заглянуть внутрь</a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 mb-5">
+                            <div class="property-card">
+                                <img src="img/studio.png" class="img-fluid mb-3" alt="Фото недвижимости">
+                                <h3 class="property-name mb-3">2-к. квартира, 62 м², 4/12 эт</h3>
+                                <p class="property-price">18 500 000 ₽ (298 000 ₽/м²)</p>
+                                <img src="img/path.png" class="path" alt="Маршрут">
+                                <ul class="property-features mb-3">
+                                    <li>
+                                        <span>Площадь</span>
+                                        <span><strong>25.6 м²</strong></span>
+                                    </li>
+                                    <li>
+                                        <span>Этаж</span>
+                                        <span><strong>5 из 19</strong></span>
+                                    </li>
+                                    <li>
+                                        <span>Ремонт</span>
+                                        <span><strong>Евро</strong></span>
+                                    </li>
+                                </ul>
+                                <a href="#" class="property-btn">Заглянуть внутрь</a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 mb-5">
+                            <div class="property-card">
+                                <img src="img/studio.png" class="img-fluid mb-3" alt="Фото недвижимости">
+                                <h3 class="property-name mb-3">2-к. квартира, 62 м², 4/12 эт</h3>
+                                <p class="property-price">18 500 000 ₽ (298 000 ₽/м²)</p>
+                                <img src="img/path.png" class="path" alt="Маршрут">
+                                <ul class="property-features mb-3">
+                                    <li>
+                                        <span>Площадь</span>
+                                        <span><strong>25.6 м²</strong></span>
+                                    </li>
+                                    <li>
+                                        <span>Этаж</span>
+                                        <span><strong>5 из 19</strong></span>
+                                    </li>
+                                    <li>
+                                        <span>Ремонт</span>
+                                        <span><strong>Евро</strong></span>
+                                    </li>
+                                </ul>
+                                <a href="#" class="property-btn">Заглянуть внутрь</a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 mb-5">
+                            <div class="property-card">
+                                <img src="img/studio.png" class="img-fluid mb-3" alt="Фото недвижимости">
+                                <h3 class="property-name mb-3">2-к. квартира, 62 м², 4/12 эт</h3>
+                                <p class="property-price">18 500 000 ₽ (298 000 ₽/м²)</p>
+                                <img src="img/path.png" class="path" alt="Маршрут">
+                                <ul class="property-features mb-3">
+                                    <li>
+                                        <span>Площадь</span>
+                                        <span><strong>25.6 м²</strong></span>
+                                    </li>
+                                    <li>
+                                        <span>Этаж</span>
+                                        <span><strong>5 из 19</strong></span>
+                                    </li>
+                                    <li>
+                                        <span>Ремонт</span>
+                                        <span><strong>Евро</strong></span>
+                                    </li>
+                                </ul>
+                                <a href="#" class="property-btn">Заглянуть внутрь</a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 mb-5">
+                            <div class="property-card">
+                                <img src="img/studio.png" class="img-fluid mb-3" alt="Фото недвижимости">
+                                <h3 class="property-name mb-3">2-к. квартира, 62 м², 4/12 эт</h3>
+                                <p class="property-price">18 500 000 ₽ (298 000 ₽/м²)</p>
+                                <img src="img/path.png" class="path" alt="Маршрут">
+                                <ul class="property-features mb-3">
+                                    <li>
+                                        <span>Площадь</span>
+                                        <span><strong>25.6 м²</strong></span>
+                                    </li>
+                                    <li>
+                                        <span>Этаж</span>
+                                        <span><strong>5 из 19</strong></span>
+                                    </li>
+                                    <li>
+                                        <span>Ремонт</span>
+                                        <span><strong>Евро</strong></span>
+                                    </li>
+                                </ul>
+                                <a href="#" class="property-btn">Заглянуть внутрь</a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="property-card">
+                                <img src="img/studio.png" class="img-fluid mb-3" alt="Фото недвижимости">
+                                <h3 class="property-name mb-3">2-к. квартира, 62 м², 4/12 эт</h3>
+                                <p class="property-price">18 500 000 ₽ (298 000 ₽/м²)</p>
+                                <img src="img/path.png" class="path" alt="Маршрут">
+                                <ul class="property-features mb-3">
+                                    <li>
+                                        <span>Площадь</span>
+                                        <span><strong>25.6 м²</strong></span>
+                                    </li>
+                                    <li>
+                                        <span>Этаж</span>
+                                        <span><strong>5 из 19</strong></span>
+                                    </li>
+                                    <li>
+                                        <span>Ремонт</span>
+                                        <span><strong>Евро</strong></span>
+                                    </li>
+                                </ul>
+                                <a href="#" class="property-btn">Заглянуть внутрь</a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="property-card">
+                                <img src="img/studio.png" class="img-fluid mb-3" alt="Фото недвижимости">
+                                <h3 class="property-name mb-3">2-к. квартира, 62 м², 4/12 эт</h3>
+                                <p class="property-price">18 500 000 ₽ (298 000 ₽/м²)</p>
+                                <img src="img/path.png" class="path" alt="Маршрут">
+                                <ul class="property-features mb-3">
+                                    <li>
+                                        <span>Площадь</span>
+                                        <span><strong>25.6 м²</strong></span>
+                                    </li>
+                                    <li>
+                                        <span>Этаж</span>
+                                        <span><strong>5 из 19</strong></span>
+                                    </li>
+                                    <li>
+                                        <span>Ремонт</span>
+                                        <span><strong>Евро</strong></span>
+                                    </li>
+                                </ul>
+                                <a href="#" class="property-btn">Заглянуть внутрь</a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="property-card">
+                                <img src="img/studio.png" class="img-fluid mb-3" alt="Фото недвижимости">
+                                <h3 class="property-name mb-3">2-к. квартира, 62 м², 4/12 эт</h3>
+                                <p class="property-price">18 500 000 ₽ (298 000 ₽/м²)</p>
+                                <img src="img/path.png" class="path" alt="Маршрут">
+                                <ul class="property-features mb-3">
+                                    <li>
+                                        <span>Площадь</span>
+                                        <span><strong>25.6 м²</strong></span>
+                                    </li>
+                                    <li>
+                                        <span>Этаж</span>
+                                        <span><strong>5 из 19</strong></span>
+                                    </li>
+                                    <li>
+                                        <span>Ремонт</span>
+                                        <span><strong>Евро</strong></span>
+                                    </li>
+                                </ul>
+                                <a href="#" class="property-btn">Заглянуть внутрь</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
+
 
             <section class="budget budget--white">
                 <div class="container">
@@ -376,75 +516,43 @@
 
                             <div class="col-lg-8">
                                 <h2 class="budget-title title">
-                                    Не нашли нужного решения? <br>Отлично — обожаем <br>сложные запросы
+                                    Необязательно <br>сразу что-то покупать <br>или продавать
                                 </h2>
 
-                                <p class="budget-text">Обсудите свою задачу напрямую с руководителем агентства.
-                                    <br>Звоните или пишите напрямую любым удобном способом, я всегда на связи
-                                </p>
+                                <p class="budget-text">Приходите к нам за профессиональным мнением. <br>Подберем
+                                    несколько стратегически выгодных <br>вариантов под бюджет уже сегодня</p>
 
-                                <a href="tel:+79210925454" class="budget-link d-flex align-items-center mb-2">
-                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M9.65784 7.52857L9.39242 7.79282C9.39242 7.79282 8.76067 8.42049 7.03692 6.70665C5.31317 4.99282 5.94492 4.36515 5.94492 4.36515L6.11176 4.19832C6.52417 3.78882 6.56326 3.13082 6.20334 2.65015L5.46834 1.6684C5.02267 1.0734 4.16226 0.994653 3.65184 1.50215L2.73601 2.41215C2.48342 2.66415 2.31426 2.98965 2.33467 3.35132C2.38717 4.27707 2.80601 6.26799 5.14167 8.59082C7.61909 11.0537 9.94367 11.1517 10.8939 11.063C11.1949 11.035 11.4563 10.8822 11.6668 10.6722L12.4952 9.84849C13.0552 9.29257 12.8977 8.33882 12.1813 7.94974L11.0672 7.34365C10.597 7.08874 10.0253 7.1634 9.65784 7.52857Z"
-                                            fill="#D3A77D" />
-                                    </svg>
-                                    +7 (921) 092-54-54
-                                </a>
-                                <a href="mailto:antipov.i.v@time4realt.ru"
-                                    class="budget-link d-flex align-items-center mb-4">
-                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M2.33366 11.6666C2.01283 11.6666 1.73827 11.5524 1.50999 11.3242C1.28171 11.0959 1.16738 10.8211 1.16699 10.4999V3.49992C1.16699 3.17909 1.28133 2.90453 1.50999 2.67625C1.73866 2.44797 2.01321 2.33364 2.33366 2.33325H11.667C11.9878 2.33325 12.2626 2.44759 12.4912 2.67625C12.7199 2.90492 12.834 3.17947 12.8337 3.49992V10.4999C12.8337 10.8208 12.7195 11.0955 12.4912 11.3242C12.263 11.5528 11.9882 11.667 11.667 11.6666H2.33366ZM7.00033 7.58325L11.667 4.66659V3.49992L7.00033 6.41658L2.33366 3.49992V4.66659L7.00033 7.58325Z"
-                                            fill="#D3A77D" />
-                                    </svg>
-                                    antipov.i.v@time4realt.ru
-                                </a>
+                                <form method="post" class="budget-form">
 
-                                <div class="d-flex gap-2">
-                                    <a class="mess" href="#">
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M8.54125 0.0267748C4.99994 0.586478 2.03645 2.90484 0.731014 6.13675C0.228901 7.37983 0.0675691 8.22688 0.0150401 9.89657C-0.0421448 11.7116 0.0348777 12.259 0.760164 15.1924C1.00783 16.1944 1.26987 17.5568 1.34244 18.22C1.46541 19.3443 1.49375 19.4424 1.76338 19.6743C2.02633 19.9005 2.11782 19.9187 2.77783 19.8763C3.60281 19.8234 4.48072 19.4636 5.27685 18.8524L5.75731 18.4836L6.41407 18.8856C7.28976 19.4215 7.69157 19.5831 8.57546 19.7546C10.4742 20.123 12.5976 19.7905 14.4961 18.8273C17.0924 17.5102 18.9533 15.2246 19.6937 12.4435C20.0353 11.1607 20.0819 9.06451 19.796 7.84126C18.9231 4.10542 16.3128 1.30205 12.7348 0.257336C12.1363 0.0826439 11.6616 0.0316329 10.4137 0.00825294C9.55084 -0.00794099 8.70825 0.00045962 8.54125 0.0267748ZM11.0333 4.9637C13.403 5.46601 15.0796 7.50908 15.0796 9.89455C15.0796 11.3795 14.599 12.4688 13.4682 13.5475C12.4127 14.5543 11.2467 14.9866 9.76298 14.9218C8.9544 14.8864 8.73973 14.8347 8.05928 14.5115L7.28065 14.1418L6.8505 14.5013C6.36691 14.9053 6.03068 15.0612 5.81874 14.9799C5.61824 14.9029 5.27989 14.0739 5.10004 13.2187C4.91016 12.3163 4.9045 9.96388 5.09002 9.09933C5.30671 8.08953 5.87552 7.01446 6.5828 6.27794C7.77113 5.04032 9.28536 4.59326 11.0333 4.9637Z"
-                                                fill="#D3A77D" />
-                                        </svg>
-                                    </a>
-                                    <a class="mess" href="#">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M12.002 2C17.525 2 22.002 6.477 22.002 12C22.002 17.523 17.525 22 12.002 22C10.2347 22.003 8.49855 21.5353 6.97197 20.645L2.00597 22L3.35797 17.032C2.46693 15.5049 1.99887 13.768 2.00197 12C2.00197 6.477 6.47897 2 12.002 2ZM8.59397 7.3L8.39397 7.308C8.26466 7.31691 8.13832 7.35087 8.02197 7.408C7.91354 7.46951 7.81453 7.5463 7.72797 7.636C7.60797 7.749 7.53997 7.847 7.46697 7.942C7.09709 8.4229 6.89794 9.01331 6.90097 9.62C6.90297 10.11 7.03097 10.587 7.23097 11.033C7.63997 11.935 8.31297 12.89 9.20097 13.775C9.41497 13.988 9.62497 14.202 9.85097 14.401C10.9544 15.3724 12.2692 16.073 13.691 16.447L14.259 16.534C14.444 16.544 14.629 16.53 14.815 16.521C15.1062 16.5056 15.3905 16.4268 15.648 16.29C15.7788 16.2223 15.9066 16.1489 16.031 16.07C16.031 16.07 16.0733 16.0413 16.156 15.98C16.291 15.88 16.374 15.809 16.486 15.692C16.57 15.6053 16.64 15.5047 16.696 15.39C16.774 15.227 16.852 14.916 16.884 14.657C16.908 14.459 16.901 14.351 16.898 14.284C16.894 14.177 16.805 14.066 16.708 14.019L16.126 13.758C16.126 13.758 15.256 13.379 14.724 13.137C14.6683 13.1128 14.6086 13.0989 14.548 13.096C14.4795 13.0888 14.4104 13.0965 14.3452 13.1184C14.2799 13.1403 14.2202 13.176 14.17 13.223C14.165 13.221 14.098 13.278 13.375 14.154C13.3335 14.2098 13.2763 14.2519 13.2108 14.2751C13.1452 14.2982 13.0743 14.3013 13.007 14.284C12.9418 14.2666 12.878 14.2446 12.816 14.218C12.692 14.166 12.649 14.146 12.564 14.11C11.9898 13.8599 11.4584 13.5215 10.989 13.107C10.863 12.997 10.746 12.877 10.626 12.761C10.2326 12.3842 9.88972 11.958 9.60597 11.493L9.54697 11.398C9.50523 11.3338 9.47101 11.265 9.44497 11.193C9.40697 11.046 9.50597 10.928 9.50597 10.928C9.50597 10.928 9.74897 10.662 9.86197 10.518C9.97197 10.378 10.065 10.242 10.125 10.145C10.243 9.955 10.28 9.76 10.218 9.609C9.93797 8.925 9.64863 8.24467 9.34997 7.568C9.29097 7.434 9.11597 7.338 8.95697 7.319C8.90297 7.31233 8.84897 7.307 8.79497 7.303C8.6607 7.2953 8.52606 7.29664 8.39197 7.307L8.59397 7.3Z"
-                                                fill="#D3A77D" />
-                                        </svg>
-                                    </a>
-                                    <a class="mess" href="#">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM16.64 8.8C16.49 10.38 15.84 14.22 15.51 15.99C15.37 16.74 15.09 16.99 14.83 17.02C14.25 17.07 13.81 16.64 13.25 16.27C12.37 15.69 11.87 15.33 11.02 14.77C10.03 14.12 10.67 13.76 11.24 13.18C11.39 13.03 13.95 10.7 14 10.49C14.0069 10.4582 14.006 10.4252 13.9973 10.3938C13.9886 10.3624 13.9724 10.3337 13.95 10.31C13.89 10.26 13.81 10.28 13.74 10.29C13.65 10.31 12.25 11.24 9.52 13.08C9.12 13.35 8.76 13.49 8.44 13.48C8.08 13.47 7.4 13.28 6.89 13.11C6.26 12.91 5.77 12.8 5.81 12.45C5.83 12.27 6.08 12.09 6.55 11.9C9.47 10.63 11.41 9.79 12.38 9.39C15.16 8.23 15.73 8.03 16.11 8.03C16.19 8.03 16.38 8.05 16.5 8.15C16.6 8.23 16.63 8.34 16.64 8.42C16.63 8.48 16.65 8.66 16.64 8.8Z"
-                                                fill="#D3A77D" />
-                                        </svg>
-                                    </a>
-                                </div>
+                                    <div class="mb-4">
+                                        <label class="form-label">Ваше имя</label>
+                                        <input type="text" name="name" class="form-input">
+                                    </div>
 
+                                    <div class="mb-4">
+                                        <label class="form-label">Ваш телефон</label>
+                                        <input type="tel" name="phone" class="form-input">
+                                    </div>
+
+                                    <button type="submit" class="btn w-100 budget-btn">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ
+                                        <svg width="25" height="6" viewBox="0 0 25 6" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.5 3.22727H23.5M23.5 3.22727L20.05 0.5M23.5 3.22727L20.05 5.5"
+                                                stroke="#363636" stroke-linecap="round" />
+                                        </svg>
+                                    </button>
+
+                                    <p class="budget-form-text">
+                                        Нажимая кнопку, вы даете согласие <br>на обработку персональных данных
+                                    </p>
+
+                                </form>
                             </div>
-                            <!-- <div class="col-lg-4 d-flex justify-content-end mt-auto"> -->
-
-                            <!-- </div> -->
                         </div>
                     </div>
                 </div>
-                <div class="director-card">
-                    <div class="director-name">Антипов Игорь Владимирович</div>
-                    <div class="director-role">Руководитель агентства недвижимости <br>«Time4Realt» в
-                        Санкт-Петербурге и Ленобласти</div>
-                </div>
             </section>
         </main>
-
         <footer class="footer py-5">
             <div class="container">
 

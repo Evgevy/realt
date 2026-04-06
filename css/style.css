@@ -237,6 +237,15 @@ ul {
     transition: 0.3s;
 }
 
+.header-wrapper--white .burger span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: rgba(211, 167, 125, 1);
+    flex-shrink: 0;
+    transition: 0.3s;
+}
+
 /* Анимация в крестик */
 .burger.active span:nth-child(1) {
     transform: translateY(5px) rotate(45deg);
@@ -288,6 +297,38 @@ ul {
 }
 
 
+.header-wrapper--white::after {
+    display: none;
+}
+
+.header-wrapper--white .header {
+    border-bottom: 1px solid rgba(217, 217, 217, 1);
+}
+
+.header-wrapper--white .header-link {
+    color: rgba(54, 54, 54, 1);
+}
+
+.header-wrapper--white .header-item::after {
+    background: rgba(217, 217, 217, 1);
+}
+
+.header-wrapper--white .header-item:last-child::before {
+    background: rgba(217, 217, 217, 1);
+}
+
+.header-wrapper--white .header-social::before {
+    background: rgba(217, 217, 217, 1);
+}
+
+.header-wrapper--white .header-tel {
+   
+    color: rgba(54, 54, 54, 1);
+}
+
+.header-wrapper--white .header-mail {
+    color: rgba(54, 54, 54, 0.8);
+}
 
 
 
@@ -766,7 +807,7 @@ ul {
 }
 
 .budget--white .budget-form {
-    max-width: 280px;
+    max-width: 285px;
 }
 
 .budget--white .form-label {
@@ -1502,11 +1543,76 @@ ul {
 }
 
 
+.service .budget.budget--white::before {
+    content: '';
+    position: absolute;
+    right: 170px;
+    bottom: 0px;
+    width: 500px;
+    height: 470px;
+    background: url(../img/men.png) no-repeat center / contain;
+}
+
+.director-card {
+    background: rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 8px;
+    padding: 10px 12px;
+    position: absolute;
+    right: 340px;   
+    bottom: 40px;  
+    width: 245px;
+    z-index: 1;
+}
+
+.director-name {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: -0.5px;
+    vertical-align: middle;
+    color: rgba(255, 255, 255, 1);
+    margin: 0 0 5px;
+}
+
+.director-role {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 100%;
+    letter-spacing: -0.5px;
+    vertical-align: middle;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+}
+
+
+.budget-link {
+    gap: 10px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: -0.5px;
+    vertical-align: middle;
+    color: rgba(54, 54, 54, 1);
+    transition: .3s;
+}
+
+.budget-link:hover {
+    opacity: 0.8;
+}
+
+.budget-link svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+
 .footer {
     border-top: 1px solid rgba(217, 217, 217, 1);
 }
 
-.main .footer {
+.body .footer {
     border-top: none;
 }
 
@@ -1896,7 +2002,8 @@ ul {
 }
 
 
-.about .budget.budget--white::before {
+.about .budget.budget--white::before,
+.catalog .budget.budget--white::before {
     content: '';
     position: absolute;
     right: 170px;
@@ -2089,6 +2196,107 @@ ul {
 }
 
 
+/* Контакты */
+
+.contacts-main {
+    padding: 60px 0;
+}
+
+.contacts-main-title {
+    color: rgba(54, 54, 54, 1);
+    margin: 0 0 60px;
+}
+
+.contacts-info {
+    padding-bottom: 25px;
+    border-bottom: 1px solid rgba(217, 217, 217, 1);
+}
+
+.contacts-title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: -2%;
+    color: rgba(54, 54, 54, 1);
+    margin: 0 0 30px;
+}
+
+.contacts-item {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.contacts-item svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+.contacts-item a,
+.contacts-item span {
+    
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: -0.5px;
+    color: rgba(54, 54, 54, 1);
+}
+
+.contacts-item a {
+    transition: .3s;
+}
+
+.contacts-item a:hover {
+    opacity: 0.8;
+}
+
+.contacts-map-preview {
+    width: 108px;
+    height: 18px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.contacts-route {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: -2%;
+    color: rgba(211, 167, 125, 1);
+    transition: .3s;
+}
+
+.contacts-route:hover {
+    opacity: 0.8;
+}
+
+.contacts-map {
+    max-width: 100%;
+    height: 100%;
+    aspect-ratio: 550/250;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+
+.contacts .agent {
+    padding: 10px 0 70px;
+}
+
+
+.catalog .hero-top {
+    margin: 0 0 40px;
+}
+
+.catalog .hero-top .col-auto {
+    padding: 0;
+}
+
+.catalog .hero-wrapper {
+    padding-top: 450px;
+}
+
 
 @media screen and (max-width: 1400px) {
     .header-nav {
@@ -2131,6 +2339,10 @@ ul {
         top: -25px;
     }
 
+    .header-wrapper--white .header-social::after {
+       background: rgba(217, 217, 217, 1);
+    }
+
     .hero-bottom {
         margin-bottom: 20px;
     }
@@ -2165,8 +2377,22 @@ ul {
     }
 
 
-    .about .budget.budget--white::before {
+    .about .budget.budget--white::before,
+    .catalog .budget.budget--white::before {
         right: 0px;
+    }
+
+    .service .budget.budget--white::before {
+        right: 0;
+    }
+
+    .director-card {
+        right: 170px;
+    }
+
+
+    .catalog .hero-wrapper {
+        padding-top: 250px;
     }
 
 }
@@ -2314,7 +2540,8 @@ ul {
     }
 
 
-    .about .budget.budget--white::before {
+    .about .budget.budget--white::before,
+    .catalog .budget.budget--white::before {
         right: -150px;
     }
 
@@ -2325,6 +2552,23 @@ ul {
 
     .header-wrapper--services .hero-work {
         text-align: left;
+    }
+
+
+    .service .budget.budget--white .budget-wrapper {
+        padding-bottom: 200px;
+    }
+
+    .service .budget.budget--white::before {
+        
+        width: 350px;
+        height: 335px;
+        right: -25px;
+    }
+
+    .director-card {
+        right: 40px;
+        bottom: 20px;
     }
 
 }
@@ -2345,6 +2589,10 @@ ul {
 
     }
 
+    .header-wrapper--white .burger::before {
+        background: rgba(217, 217, 217, 1);
+    }
+
     .header-phone-icon {
         position: relative;
         padding-left: 15px;
@@ -2359,6 +2607,11 @@ ul {
         display: block;
         left: 0;
         top: -30px;
+    }
+
+    .header-wrapper--white .header-phone-icon::before {
+        background: rgba(217, 217, 217, 1);
+        height: 75px;
     }
 
     .hero-title {
@@ -2523,7 +2776,8 @@ ul {
     }
 
 
-    .about .budget.budget--white::before {
+    .about .budget.budget--white::before,
+    .catalog .budget.budget--white::before {
         right: -100px;
         width: 500px;
         height: 450px;
@@ -2537,6 +2791,11 @@ ul {
 
     .header-wrapper--services .hero-bottom {
         padding: 25px 0;
+    }
+
+
+    .contacts-main-title {
+        margin-bottom: 30px;
     }
 }
 
@@ -2629,15 +2888,36 @@ ul {
         height: 100px;
     }
 
-    .about .budget.budget--white::before {
+    .about .budget.budget--white::before,
+    .catalog .budget.budget--white::before {
         right: -120px;
         width: 390px;
         height: 360px;
     }
 
-    .about .budget.budget--white .budget-text br {
+    .about .budget.budget--white .budget-text br,
+    .catalog .budget.budget--white .budget-text br {
         display: none;
     }
+
+    .budget--white .budget-text br {
+        display: none;
+    }
+
+
+    .service .budget.budget--white::before {
+        right: -125px;
+    }
+
+    .director-card {
+        right: 15px;
+    }
+
+
+    .catalog .hero-wrapper {
+        padding-top: 180px;
+    }
+
 }
 
 @media screen and (max-width: 390px) {
@@ -2653,5 +2933,159 @@ ul {
 
     .small-wrapper p {
         font-size: 16px;
+    }
+}
+
+
+.catalog-main {
+    padding: 0 0 70px;
+}
+
+
+.catalog-filtr {
+    border-bottom: 1px solid rgba(217, 217, 217, 1);
+}
+
+.filter-item {
+    position: relative;
+    border-right: 1px solid rgba(217, 217, 217, 1);
+}
+
+.catalog-filtr .col-lg-3:last-child .filter-item {
+    border-right: none;
+}
+
+.filter-btn {
+    padding: 40px 24px;
+    border: none;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: -2%;
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+.filter-btn:hover {
+    opacity: 0.6;
+}
+
+.filter-btn svg {
+    transition: .3s;
+}
+
+.catalog-filtr .col-lg-3:first-child .filter-item .filter-btn {
+    padding: 40px 24px 40px 0;
+}
+
+.filter-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border: none;
+    padding: 15px;
+    z-index: 10;
+}
+
+.filter-item.active .filter-dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+.custom-radio {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: -2%;
+    text-transform: uppercase;
+
+}
+
+/* скрываем стандартный radio */
+.custom-radio input {
+    display: none;
+}
+
+/* квадрат */
+.radio-box {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    position: relative;
+}
+
+/* внутренний квадрат */
+.radio-box::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    background: rgba(211, 167, 125, 1);
+    transform: translate(-50%, -50%) scale(0);
+    transition: 0.2s;
+}
+
+/* состояние checked */
+.custom-radio input:checked + .radio-box::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.filter-inputs {
+    display: flex;
+    gap: 10px;
+    align-items: start;
+}
+
+.filter-inputs input::placeholder {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: -2%;
+    text-transform: uppercase;
+    color: rgba(54, 54, 54, 0.4);
+}
+
+@media screen and (max-width: 990px) {
+    .filter-dropdown {
+        position: static; 
+        margin-top: 0.5rem;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .filter-item {
+        border: none;
+        width: 90%;
+    }
+
+    .filter-btn {
+        padding-bottom: 20px !important;
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .filter-item {
+        width: 100%;
+    }
+
+    .filter-btn {
+        padding-top: 20px;
     }
 }
