@@ -51,7 +51,7 @@ ul {
     min-height: 700px;
     display: flex;
     flex-direction: column; */
-    overflow: hidden;
+    /* overflow: hidden; */
     z-index: 10;
 }
 
@@ -2967,6 +2967,7 @@ ul {
     line-height: 100%;
     letter-spacing: -2%;
     text-transform: uppercase;
+    color: rgba(54, 54, 54, 1);
     transition: .3s;
 }
 
