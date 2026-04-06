@@ -2983,6 +2983,9 @@ ul {
 }
 
 .filter-btn svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
     transition: .3s;
 }
 
