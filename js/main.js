@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-
+    Fancybox.bind("[data-fancybox]", {});
     // Маска телефона
     document.querySelectorAll('input[name="phone"]').forEach(input => {
       input.addEventListener('input', function () {
@@ -147,74 +147,87 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-        // --- Получаем DOM элементы калькулятора ---
-    const priceField = document.querySelectorAll('.calc-value')[0]; // цена
-    const firstPaymentField = document.querySelectorAll('.calc-value')[1]; // первый взнос
-    const termField = document.querySelectorAll('.calc-value')[2]; // срок
+    // --- Калькулятор ---
+    const productCalc = document.querySelector('.product-calc');
+    if (!productCalc) return;
+
+    // Функция для поиска поля внутри группы
+    function getField(group, selector) {
+        return group.querySelector(selector);
+    }
 
     // --- Кнопки процентов ---
-    const percentBtns = Array.from(document.querySelectorAll('.calc-btn'))
-        .filter(btn => btn.textContent.includes('%'));
+    const percentGroups = Array.from(productCalc.querySelectorAll('.calc-group'))
+        .filter(g => g.querySelector('.calc-btn') && g.querySelector('.calc-btn').textContent.includes('%'));
 
-    percentBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            percentBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
+    percentGroups.forEach(group => {
+        const valueField = getField(group, '.calc-value');
+        const priceField = productCalc.querySelector('.calc-group:first-child .calc-value');
+        const buttons = Array.from(group.querySelectorAll('.calc-btn'));
 
-            const percent = parseInt(btn.textContent);
-            const price = parseInt(priceField.textContent.replace(/\s/g, ''));
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                buttons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
 
-            const value = Math.round(price * percent / 100);
-            firstPaymentField.textContent = value.toLocaleString('ru-RU');
+                const percent = parseInt(btn.textContent);
+                const price = parseInt(priceField.textContent.replace(/\s/g, ''));
+
+                const value = Math.round(price * percent / 100);
+                valueField.textContent = value.toLocaleString('ru-RU');
+            });
         });
     });
 
     // --- Кнопки срока ---
-    const termBtns = Array.from(document.querySelectorAll('.calc-btn'))
-        .filter(btn => btn.textContent.includes('лет'));
+    const termGroups = Array.from(productCalc.querySelectorAll('.calc-group'))
+        .filter(g => g.querySelector('.calc-btn') && g.querySelector('.calc-btn').textContent.includes('лет'));
 
-    termBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            termBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
+    termGroups.forEach(group => {
+        const valueField = getField(group, '.calc-value');
+        const buttons = Array.from(group.querySelectorAll('.calc-btn'));
 
-            const years = parseInt(btn.textContent);
-            termField.textContent = years;
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                buttons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const years = parseInt(btn.textContent);
+                valueField.textContent = years;
+            });
         });
     });
 
-     // --- Программы ---
-    const programBtns = Array.from(document.querySelectorAll('.calc-btn'))
-      .filter(btn =>
-          btn.textContent.includes('Базовая') ||
-          btn.textContent.includes('Семейная') ||
-          btn.textContent.includes('IT')
-      );
+    // --- Кнопки программ ---
+    const programGroup = Array.from(productCalc.querySelectorAll('.calc-group'))
+        .find(g => g.querySelector('.calc-btn') && 
+            Array.from(g.querySelectorAll('.calc-btn')).some(b => /Базовая|Семейная|IT/.test(b.textContent))
+        );
 
-      const calcFooters = document.querySelectorAll('.calc-footer');
+    const programBtns = programGroup ? Array.from(programGroup.querySelectorAll('.calc-btn')) : [];
+    const calcFooters = Array.from(document.querySelectorAll('.calc-footer'));
 
-      // скрываем ВСЕ footer при загрузке
-      calcFooters.forEach(f => f.style.display = 'none');
+    // Скрываем все футеры при загрузке
+    calcFooters.forEach(f => f.style.display = 'none');
 
-      programBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-          // снимаем active только с кнопок программ
-          programBtns.forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
+    programBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const programName = btn.textContent.trim();
 
-          const programName = btn.textContent.trim();
+            // Снимаем active с кнопок
+            programBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
 
-          // сначала скрываем все
-          calcFooters.forEach(f => f.style.display = 'none');
+            // Скрываем все футеры
+            calcFooters.forEach(f => f.style.display = 'none');
 
-          // ищем нужный footer и показываем
-          calcFooters.forEach(f => {
-              const label = f.querySelector('.calc-bank-name span');
-
-              if (label && label.textContent.trim() === programName) {
-                  f.style.display = 'flex';
-              }
-          });
-      });
+            // Показываем только нужный футер
+            calcFooters.forEach(f => {
+                const label = f.querySelector('.calc-bank-name span');
+                if (label && label.textContent.trim() === programName) {
+                    f.style.display = 'flex';
+                }
+            });
+        });
     });
 });
