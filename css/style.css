@@ -2662,6 +2662,7 @@ ul {
 }
 
 .calc-footer-sum {
+    white-space: nowrap;
     font-weight: 400;
     font-size: 14px;
     line-height: 100%;
