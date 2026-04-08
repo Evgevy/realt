@@ -119,4 +119,102 @@ document.addEventListener("DOMContentLoaded", function () {
         input.value = input.value.replace(/\D/g, ''); 
       });
     });
+
+    
+    const swiperProduct = new Swiper(".mySwiper", {
+      spaceBetween: 15,
+      slidesPerView: 3,
+      freeMode: true,
+      watchSlidesProgress: true,
+      // breakpoints: {
+      //   320: {
+      //     spaceBetween: 20
+      //   },
+      //   768: {
+      //     spaceBetween: 20
+      //   }
+      // }
+    });
+    var swiper2 = new Swiper(".mySwiper2", {
+      spaceBetween: 10,
+      navigation: {
+        nextEl: ".swiper-button-next.product-next",
+        prevEl: ".swiper-button-prev.product-prev"
+      },
+      thumbs: {
+        swiper: swiperProduct
+      }
+    });
+
+
+        // --- Получаем DOM элементы калькулятора ---
+    const priceField = document.querySelectorAll('.calc-value')[0]; // цена
+    const firstPaymentField = document.querySelectorAll('.calc-value')[1]; // первый взнос
+    const termField = document.querySelectorAll('.calc-value')[2]; // срок
+
+    // --- Кнопки процентов ---
+    const percentBtns = Array.from(document.querySelectorAll('.calc-btn'))
+        .filter(btn => btn.textContent.includes('%'));
+
+    percentBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            percentBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const percent = parseInt(btn.textContent);
+            const price = parseInt(priceField.textContent.replace(/\s/g, ''));
+
+            const value = Math.round(price * percent / 100);
+            firstPaymentField.textContent = value.toLocaleString('ru-RU');
+        });
+    });
+
+    // --- Кнопки срока ---
+    const termBtns = Array.from(document.querySelectorAll('.calc-btn'))
+        .filter(btn => btn.textContent.includes('лет'));
+
+    termBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            termBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const years = parseInt(btn.textContent);
+            termField.textContent = years;
+        });
+    });
+
+     // --- Программы ---
+    const programBtns = Array.from(document.querySelectorAll('.calc-btn'))
+      .filter(btn =>
+          btn.textContent.includes('Базовая') ||
+          btn.textContent.includes('Семейная') ||
+          btn.textContent.includes('IT')
+      );
+
+      const calcFooters = document.querySelectorAll('.calc-footer');
+
+      // скрываем ВСЕ footer при загрузке
+      calcFooters.forEach(f => f.style.display = 'none');
+
+      programBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+          // снимаем active только с кнопок программ
+          programBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          const programName = btn.textContent.trim();
+
+          // сначала скрываем все
+          calcFooters.forEach(f => f.style.display = 'none');
+
+          // ищем нужный footer и показываем
+          calcFooters.forEach(f => {
+              const label = f.querySelector('.calc-bank-name span');
+
+              if (label && label.textContent.trim() === programName) {
+                  f.style.display = 'flex';
+              }
+          });
+      });
+    });
 });
